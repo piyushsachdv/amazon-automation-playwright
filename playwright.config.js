@@ -6,7 +6,7 @@ module.exports = defineConfig({
   workers: 2,
   timeout: 120000,
   use: {
-    headless: false,
+    headless: true,
     viewport: { width: 1280, height: 720 }
   },
    launchOptions: {
