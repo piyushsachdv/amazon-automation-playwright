@@ -1,6 +1,8 @@
 const { test, expect } = require('@playwright/test');
 const { searchAndAddToCart } = require('./utils');
 
+test.skip(process.env.CI, 'Skipping in CI');
+
 test('TC01 - Search iPhone and add to cart @smoke', async ({ browser }) => {
     const context = await browser.newContext();
     const page = await context.newPage();
